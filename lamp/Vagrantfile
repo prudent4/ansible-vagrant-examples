@@ -8,14 +8,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.ssh.insert_key = false
 
   config.vm.provider :virtualbox do |v|
-    v.name = "lamp"
+    v.name = "lamp2"
     v.memory = 512
     v.cpus = 2
     v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
     v.customize ["modifyvm", :id, "--ioapic", "on"]
   end
 
-  config.vm.hostname = "lamp"
+  config.vm.hostname = "lamp2"
   config.vm.network :private_network, ip: "192.168.33.33"
 
   # Set the name of the VM. See: http://stackoverflow.com/a/17864388/100134
